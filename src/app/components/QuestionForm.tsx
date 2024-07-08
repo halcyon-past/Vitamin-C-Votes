@@ -1,32 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
+import { questions } from '../lib/questions';
 
-const guys = ['Aritro', 'Debrati', 'Aratrik', 'Sujay'];
-const girls = ['Rupkatha', 'Poulami', 'Madhulika', 'Sharanya'];
-const combined = guys.concat(girls);
-guys.sort();
-girls.sort();
-combined.sort();
-
-const questions = [
-  {
-    question: 'Who is the hottest guy?',
-    answers: guys,
-  },
-  {
-    question: 'Who is the best Competitive Coder?',
-    answers: combined,
-  },
-  {
-    question: 'Who is the best Developer?',
-    answers: combined,
-  },
-  {
-    question: 'Who is the hottest girl?',
-    answers: girls,
-  },
-];
 
 const QuestionForm = () => {
   const [responses, setResponses] = useState(
