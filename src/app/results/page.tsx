@@ -4,8 +4,12 @@ import { Pie } from 'react-chartjs-2';
 import { questions } from '../lib/questions';
 import 'chart.js/auto';
 
+interface ResponseData {
+  [key: string]: string;
+}
+
 const Results = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<ResponseData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,12 +28,12 @@ const Results = () => {
     fetchData();
   }, []);
 
-  const getChartData = (questionIndex) => {
+  const getChartData = (questionIndex: number) => {
     const responses = data.map((response) => response[questionIndex]);
     const counts = responses.reduce((acc, answer) => {
       acc[answer] = (acc[answer] || 0) + 1;
       return acc;
-    }, {});
+    }, {} as { [key: string]: number });
 
     return {
       labels: Object.keys(counts),
@@ -54,7 +58,7 @@ const Results = () => {
   }
 
   return (
-    <div className=" w-full flex flex-col items-center p-4">
+    <div className="w-full flex flex-col items-center p-4">
       {questionsArray.map((question, index) => (
         <div key={index} className="mb-8">
           <h2 className="text-xl font-bold mb-4 text-center">{question.question}</h2>
