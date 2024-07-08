@@ -6,7 +6,7 @@ import Link from 'next/link';
 const LandingPage = () => {
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center p-4">
       <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center">
         <h1 className="text-5xl font-bold text-orange-600 mb-4">Vitamin C Bangali Votes</h1>
         <p className="text-xl text-gray-700 max-w-2xl mb-8 mx-auto">
