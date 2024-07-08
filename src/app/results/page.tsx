@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { Pie } from 'react-chartjs-2';
+import { questions } from '../lib/questions';
 import 'chart.js/auto';
 
 const Results = () => {
@@ -54,7 +55,7 @@ const Results = () => {
 
   return (
     <div className=" w-full flex flex-col items-center p-4">
-      {questions.map((question, index) => (
+      {questionsArray.map((question, index) => (
         <div key={index} className="mb-8">
           <h2 className="text-xl font-bold mb-4 text-center">{question.question}</h2>
           <div className="w-full max-w-md mx-auto">
@@ -66,19 +67,8 @@ const Results = () => {
   );
 };
 
-const questions = [
-  {
-    question: 'Who is the hottest guy?',
-  },
-  {
-    question: 'Who is the best Competitive Coder?',
-  },
-  {
-    question: 'Who is the best Developer?',
-  },
-  {
-    question: 'Who is the hottest girl?',
-  },
-];
+const questionsArray = questions.map((q) => ({
+  question: q.question,
+}));
 
 export default Results;

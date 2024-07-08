@@ -9,15 +9,29 @@ const QuestionForm = () => {
     questions.reduce((acc, _, index) => ({ ...acc, [index]: '' }), {})
   );
 
-  const handleChange = (index: any, event: any) => {
+  const [errors, setErrors] = useState<string[]>([]);
+
+  const handleChange = (index: number, event: React.ChangeEvent<HTMLSelectElement>) => {
     setResponses({
       ...responses,
       [index]: event.target.value,
     });
+
+    if (errors.includes(index.toString())) {
+      setErrors(errors.filter((err) => err !== index.toString()));
+    }
   };
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
+    const emptyResponses = Object.entries(responses).filter(([, value]) => value === '');
+
+    if (emptyResponses.length > 0) {
+      setErrors(emptyResponses.map(([key]) => key));
+      alert('Please fill out all questions before submitting.');
+      return;
+    }
 
     const submissionData = {
       ...responses,

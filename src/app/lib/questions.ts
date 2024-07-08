@@ -10,11 +10,19 @@ const questions = [
     answers: girls,
   },
   {
-    question: 'Who is the wortst guy?',
+    question: 'Who is the worst guy?',
     answers: guys,
   },
   {
     question: 'Who is the worst girl?',
+    answers: girls,
+  },
+  {
+    question: 'Who is the playboy of the group?',
+    answers: guys,
+  },
+  {
+    question: 'Who is the playgirl of the group?',
     answers: girls,
   },
   {
@@ -42,6 +50,10 @@ const questions = [
     answers: combined,
   },
   {
+    question: 'Who is the funniest person?',
+    answers: combined,
+  },
+  {
     question: 'Who is the dumbest person?',
     answers: combined,
   },
@@ -54,11 +66,19 @@ const questions = [
     answers: combined,
   },
   {
-    question: 'Somone you are jealous of?',
+    question:'Who is the biggest red flag?',
     answers: combined,
   },
   {
-    question: 'Someone you have a crush on?',
+    question:'Who is the biggest green flag?',
+    answers: combined,
+  },
+  {
+    question: 'Someone you are Jealous of?',
+    answers: combined,
+  },
+  {
+    question: 'Someone you have a Crush on?',
     answers: combined,
   },
 ];
