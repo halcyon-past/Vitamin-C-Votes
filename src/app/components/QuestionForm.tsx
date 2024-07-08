@@ -77,6 +77,9 @@ const QuestionForm = () => {
                 </option>
               ))}
             </select>
+            {errors.includes(index.toString()) && (
+              <p className="text-red-600 text-sm mt-1">This section is not filled.</p>
+            )}
           </div>
         ))}
         <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">
