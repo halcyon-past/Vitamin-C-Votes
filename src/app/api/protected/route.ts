@@ -8,7 +8,7 @@ export async function GET() {
         return new Response("Unauthorized", { status: 401 })
     }
     const user = await getUser()
-    const data = { message: "Hello User", id: user.id }
+    const data = { message: "Hello User", id: user?.id }
 
     return NextResponse.json({ data })
 }

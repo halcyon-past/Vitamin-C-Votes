@@ -29,11 +29,11 @@ export async function POST(req: NextRequest) {
         const db = client.db();
         const collection = db.collection('votes');
 
-        /*const existingSubmission = await collection.findOne({ user: user.id });
+        const existingSubmission = await collection.findOne({ user: user?.id });
 
         if (existingSubmission||user===null) {
             return NextResponse.json({ message: 'Only one submission allowed.' }, { status: 409 });
-        }*/
+        }
 
         const submissionWithUser = {
             ...data,
