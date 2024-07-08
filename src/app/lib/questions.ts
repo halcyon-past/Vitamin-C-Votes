@@ -2,6 +2,10 @@ import { guys,girls,combined } from "./people";
 
 const questions = [
   {
+    question: 'Who is the best Admin?',
+    answers: ['Aritro Saha'],
+  },
+  {
     question: 'Who is the hottest guy?',
     answers: guys,
   },
@@ -63,6 +67,10 @@ const questions = [
   },
   {
     question: 'Who is the most annoying person?',
+    answers: combined,
+  },
+  {
+    question: 'Who is the biggest catfish?',
     answers: combined,
   },
   {
