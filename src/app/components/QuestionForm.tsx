@@ -3,10 +3,13 @@
 import React, { useState } from 'react';
 import { questions } from '../lib/questions';
 
+type Responses = {
+  [key: number]: string;
+};
 
 const QuestionForm = () => {
-  const [responses, setResponses] = useState(
-    questions.reduce((acc, _, index) => ({ ...acc, [index]: '' }), {})
+  const [responses, setResponses] = useState<Responses>(
+    questions.reduce((acc, _, index) => ({ ...acc, [index]: '' }), {} as Responses)
   );
 
   const [errors, setErrors] = useState<string[]>([]);
