@@ -13,6 +13,7 @@ const LandingPage = () => {
           Remember the fun we had in the first year with our Google Forms voting? 
           It’s our final year now, and everyone wanted to have that fun one last time. 
           Let's see how our opinions have changed over the years. Join us for one more round of voting!
+          The Voting is completely Anonymous and Secure. Your Secrets are safe with you.
         </p>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center items-center">
           <Link
