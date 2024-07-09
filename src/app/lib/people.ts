@@ -6,8 +6,4 @@ guys.sort();
 girls.sort();
 combined.sort();
 
-guys.push('None of the above');
-girls.push('None of the above');
-combined.push('None of the above');
-
 export { guys, girls, combined };
